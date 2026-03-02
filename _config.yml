@@ -1,0 +1,15 @@
+title: Autonomous Intelligence
+description: Exploring autonomous intelligence, agentic development, and developer experience
+author: Ori Nachum
+url: ""
+baseurl: ""
+
+permalink: /:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore
