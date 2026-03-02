@@ -1,4 +1,4 @@
-# Agentic-human
+# Agentic Human
 
 My blog on autonomous intelligence, agentic development, and developer experience.
 
