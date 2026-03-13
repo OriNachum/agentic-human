@@ -2,6 +2,7 @@
 layout: post
 title: "Everything is Agents, agentic-folders approach"
 date: 2025-12-10
+tags: [agentic-ai]
 original_url: https://medium.com/@ori.nachum_22849/everything-is-agents-agentic-folders-approach-31670e6555eb
 ---
 

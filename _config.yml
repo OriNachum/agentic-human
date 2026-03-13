@@ -1,7 +1,7 @@
-title: Autonomous Intelligence
-description: Exploring autonomous intelligence, agentic development, and developer experience
+title: Agentic Human
+description: Exploring agentic development, developer experience, and the evolving relationship between humans and AI systems
 author: Ori Nachum
-url: ""
+url: "https://agentic-human.org"
 baseurl: ""
 
 permalink: /:year/:month/:day/:title/
@@ -9,7 +9,18 @@ permalink: /:year/:month/:day/:title/
 markdown: kramdown
 highlighter: rouge
 
+kramdown:
+  toc_levels: 2..3
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
 exclude:
   - README.md
   - LICENSE
   - .gitignore
+  - Gemfile.lock
+  - CLAUDE.md
+  - .claude/

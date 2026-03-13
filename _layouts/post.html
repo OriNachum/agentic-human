@@ -5,8 +5,93 @@ layout: default
   <header class="post-header">
     <div class="post-meta">{{ page.date | date: "%Y-%m-%d" }}</div>
     <h1>{{ page.title }}</h1>
+    {% assign words = content | number_of_words %}{% assign minutes = words | divided_by: 200 %}{% if minutes < 1 %}{% assign minutes = 1 %}{% endif %}
+    <div class="reading-time">{{ minutes }} min read</div>
   </header>
+
+  {% if page.toc %}
+  <div class="toc-wrapper" id="toc">
+    <h2>Contents</h2>
+    <ul id="toc-list"></ul>
+  </div>
+  {% endif %}
+
   <div class="post-content">
     {{ content }}
   </div>
+
+  {% if page.tags.size > 0 %}
+  <div class="post-article-tags">
+    <span class="label">Tags:</span>
+    {% for tag in page.tags %}
+    <a class="tag" href="{{ '/tags' | relative_url }}#{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- Comments via giscus - requires enabling GitHub Discussions on the repo and installing the giscus GitHub App -->
+  <div class="giscus-wrapper">
+    <script src="https://giscus.app/client.js"
+      data-repo="OriNachum/agentic-human"
+      data-repo-id=""
+      data-category=""
+      data-category-id=""
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </div>
+
+  <nav class="post-nav">
+    {% if page.previous.url %}
+    <a class="prev" href="{{ page.previous.url | relative_url }}">{{ page.previous.title }}</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+    {% if page.next.url %}
+    <a class="next" href="{{ page.next.url | relative_url }}">{{ page.next.title }}</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+  </nav>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author | escape }}"
+  },
+  "url": "{{ site.url }}{{ page.url }}"
+}
+</script>
+
+{% if page.toc %}
+<script>
+  (function() {
+    var headings = document.querySelectorAll('.post-content h2, .post-content h3');
+    var list = document.getElementById('toc-list');
+    if (headings.length === 0) { document.getElementById('toc').style.display = 'none'; return; }
+    headings.forEach(function(h) {
+      if (!h.id) h.id = h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+      var li = document.createElement('li');
+      if (h.tagName === 'H3') li.style.marginLeft = '1rem';
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+  })();
+</script>
+{% endif %}

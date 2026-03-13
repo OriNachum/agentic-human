@@ -2,6 +2,7 @@
 layout: post
 title: "Nvidia Jetson Orin Super Nano 8GB — setup and demo"
 date: 2025-01-12
+tags: [edge-ai, tutorial]
 original_url: https://medium.com/@ori.nachum_22849/jetson-orin-nano-8gb-speaking-ai-setup-606c7871a7e0
 ---
 

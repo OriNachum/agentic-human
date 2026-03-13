@@ -2,6 +2,7 @@
 layout: post
 title: "Siri, do your magic"
 date: 2024-01-23
+tags: [automation, tutorial]
 original_url: https://medium.com/@ori.nachum_22849/siri-do-your-magic-9a35f8098411
 ---
 

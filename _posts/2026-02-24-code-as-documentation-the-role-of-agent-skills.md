@@ -2,6 +2,7 @@
 layout: post
 title: "Code as Documentation: The Role of Agent Skills"
 date: 2026-02-24
+tags: [agentic-ai, developer-experience]
 original_url: https://medium.com/@ori.nachum_22849/code-as-documentation-the-role-of-agent-skills-1b223c9e752d
 ---
 

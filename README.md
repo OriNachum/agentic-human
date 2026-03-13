@@ -1,8 +1,8 @@
 # Agentic Human
 
-My blog on autonomous intelligence, agentic development, and developer experience.
+My blog on agentic development, developer experience, and the evolving relationship between humans and AI systems.
 
-Built with [Jekyll](https://jekyllrb.com/). Styled with a custom dark theme.
+Built with [Jekyll](https://jekyllrb.com/). Styled with a warm cream theme and dark mode toggle.
 
 ## License
 

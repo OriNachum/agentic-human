@@ -2,6 +2,7 @@
 layout: post
 title: "Workbench Development: A Structured Approach to Agentic Coding"
 date: 2025-05-28
+tags: [agentic-ai, developer-experience]
 original_url: https://medium.com/@ori.nachum_22849/workbench-development-a-structured-approach-to-agentic-coding-06964f24c581
 ---
 
