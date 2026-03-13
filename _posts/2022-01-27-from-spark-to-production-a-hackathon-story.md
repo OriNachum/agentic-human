@@ -2,6 +2,7 @@
 layout: post
 title: "From Spark to Production, a Hackathon Story"
 date: 2022-01-27
+tags: [hackathon, culture]
 original_url: https://medium.com/@ori.nachum_22849/from-spark-to-production-a-hackathon-story-377f9e6dca59
 ---
 

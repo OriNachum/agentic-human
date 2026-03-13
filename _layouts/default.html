@@ -4,17 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncatewords: 50 }}">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="alternate" type="text/markdown" href="/llm.txt">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme');
+      if (!theme) {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "{{ site.title | escape }}",
+    "description": "{{ site.description | escape }}",
+    "url": "{{ site.url }}{{ site.baseurl }}/",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author | escape }}"
+    }
+  }
+  </script>
 </head>
 <body>
   <header class="site-header">
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="site-nav">
       <a href="{{ '/' | relative_url }}">Blog</a>
+      <a href="{{ '/tags' | relative_url }}">Tags</a>
       <a href="{{ '/about' | relative_url }}">About</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+        <span class="icon-sun">&#9728;</span>
+        <span class="icon-moon">&#9790;</span>
+      </button>
     </nav>
   </header>
 
@@ -26,5 +57,26 @@
     &copy; {{ 'now' | date: "%Y" }} {{ site.author }}.
     Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
   </footer>
+
+  <script>
+    function toggleTheme() {
+      var current = document.documentElement.getAttribute('data-theme');
+      var next = current === 'dark' ? 'light' : 'dark';
+      if (next === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+      localStorage.setItem('theme', next);
+      // Sync giscus theme if present
+      var giscusFrame = document.querySelector('iframe.giscus-frame');
+      if (giscusFrame) {
+        giscusFrame.contentWindow.postMessage(
+          { giscus: { setConfig: { theme: next } } },
+          'https://giscus.app'
+        );
+      }
+    }
+  </script>
 </body>
 </html>

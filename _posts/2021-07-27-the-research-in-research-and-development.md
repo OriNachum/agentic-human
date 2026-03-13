@@ -2,6 +2,7 @@
 layout: post
 title: "The \"Research\" in \"Research & Development\""
 date: 2021-07-27
+tags: [culture, developer-experience]
 original_url: https://medium.com/@ori.nachum_22849/the-research-in-research-development-b9d8d25f897
 ---
 

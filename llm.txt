@@ -1,0 +1,25 @@
+---
+permalink: /llm.txt
+layout: null
+---
+# Agentic Human
+
+> Exploring agentic development, developer experience, and the evolving relationship between humans and AI systems
+
+## About
+
+This blog is written by Ori Nachum. It covers agentic AI patterns, developer experience in the age of AI, and the intersection of human intent and autonomous execution.
+
+- Site: https://agentic-human.org
+- Author: Ori Nachum
+- License: CC BY 4.0
+
+## Posts
+
+{% for post in site.posts %}- [{{ post.title }}]({{ site.url }}{{ post.url }}) ({{ post.date | date: "%Y-%m-%d" }})
+{% endfor %}
+
+## Feed
+
+- RSS: https://agentic-human.org/feed.xml
+- Sitemap: https://agentic-human.org/sitemap.xml

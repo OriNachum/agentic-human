@@ -2,6 +2,7 @@
 layout: post
 title: "GenAI May Actually Have a \"Soul\""
 date: 2024-11-18
+tags: [philosophy, generative-ai]
 original_url: https://medium.com/@ori.nachum_22849/redefining-the-soul-b2e2e5d1d7bc
 ---
 
