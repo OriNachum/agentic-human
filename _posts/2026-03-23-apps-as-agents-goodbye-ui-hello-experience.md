@@ -15,7 +15,7 @@ GenUI should have been the next shift in experience, a single chat interface tha
 
 ---
 
-![Apps as Agents](/assets/images/apps-as-agents.png)
+![Apps as Agents](/assets/images/apps-as-agents.jpeg)
 
 GenUI was the right direction, but it needs an extra push. Don't try to lure me to your site, don't pull me out of my workspace. I work in Slack? Let me stay there. Teams? Sure thing — help me **reduce context switching**.
 
