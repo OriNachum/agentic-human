@@ -65,6 +65,6 @@ I still use the old way for packages — I respect closed source and usage polic
 
 This is a time when major processes change. We automate, we dare, we completely change what was previously taken for granted.
 
-How do you make your environment more agent-friendly? Consider how you make your coding strategies modern, fitting for your agentic first-citizens.
+How do you make your environment more agent-friendly? Consider how you make your coding strategies modern, fitting for your agents as first-class citizens.
 
 **Don't import, assimilate.**
