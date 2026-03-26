@@ -33,7 +33,7 @@ Error logs got smaller, easier for me to read, taking less space and sparing tok
 
 I don't have to think of mass changes — **there are no more breaking changes in my packages.**
 
-Programming language barriers virtually eliminated, and security risk by foreign code was removed drastically. Security and bugs are now my responsibility to mitigate, as I would with any piece of my code. The agent and I can grasp the full picture far better now.
+Programming language barriers were virtually eliminated, and security risk by foreign code was removed drastically. Security and bugs are now my responsibility to mitigate, as I would with any piece of my code. The agent and I can grasp the full picture far better now.
 
 ## Agent-First
 
