@@ -23,7 +23,7 @@ Here's the next step in making agents the first-citizens in the coding environme
 
 **Assimilai:** instead of using the traditional importing strategy, I let the LLM read the source, and only add the relevant logic where needed.
 
-I have been using that methodology for a while, and a huge weight lifted from that process of debugging and development. Stacktrace is smaller, changes are easier, and logic is clearer.
+I have been using that methodology for a while, and a huge weight was lifted from that process of debugging and development. Stacktrace is smaller, changes are easier, and logic is clearer.
 
 ## Benefits
 
